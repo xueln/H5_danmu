@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container{
+      width:856px;
+      height:481px;
+      margin:auto;
+      position: relative;
+    }
+    #v,#cv{
+      position: absolute;
+    }
+    #cv{
+      z-index: 99;
+      background-color: antiquewhite;
+    }
+    .container+div{
+      width:856px;
+      margin:8px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <video src="res/x.mp4" id="v"></video>
+    <canvas id="cv" width="856" height="481"></canvas>
+  </div>
+  <div>
+    <input type="text" id="inputMsg" placeholder="说点什么吧">
+    <select id="inputColor">
+      <option value="#000">请选择字体颜色</option>
+      <option value="#f00">红色字体</option>
+      <option value="#ff0">黄色字体</option>
+    </select>
+    <select id="inputFont">
+      <option value="16px">请选择字体大小</option>
+      <option value="22px">中号</option>
+      <option value="32px">大号</option>
+    </select>
+    <input type="button" id="inputBtn" value="发送">
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/msg.js"></script>
+</body>
+</html>
